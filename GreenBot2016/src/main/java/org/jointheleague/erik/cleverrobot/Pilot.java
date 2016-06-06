@@ -44,14 +44,60 @@ public class Pilot extends IRobotAdapter {
     /** This method is executed when the robot first starts up. **/
     public void initialize() throws ConnectionLostException {
         //what would you like me to do, Clever Human?
+    }
+        public void wallHugger() throws ConnectionLostException {
+            driveDirect(200, 500);
+            readSensors(0);
+            dashboard.log(getWallSignal() + "");
+            if (isBumpRight()) {
+                driveDirect(500, -500);
+                SystemClock.sleep(100);
+            }
+            if (getWallSignal() > 100) {
+                driveDirect(500, 200);
+                SystemClock.sleep(200);
+            }
+            if (isBumpRight() && isBumpLeft()) {
+                driveDirect(500, -500);
+                SystemClock.sleep(500);
+            }
+        }
+    public void dockingStation(int inByte) throws ConnectionLostException {
+        readSensors(0);
+        inByte = getInfraredByte();
+        dashboard.log(""+ inByte);
+        if (inByte != 255) {
+            driveDirect(0, 0);
+            SystemClock.sleep(10000);
+            driveDirect(50, 50);
+        }
 
 
-
+    }
+    public void goldRush() throws ConnectionLostException {
+        int inByte = getInfraredByte();
+        dashboard.log("" + inByte);
+        driveDirect(300, 300);
+        SystemClock.sleep(2000);
+        dockingStation(inByte);
+        driveDirect(-300, 300);
+        SystemClock.sleep(500);
+        dockingStation(inByte);
+        driveDirect(-300, 300);
+        SystemClock.sleep(500);
+        dockingStation(inByte);
+        driveDirect(-300, 300);
+        SystemClock.sleep(500);
+        dockingStation(inByte);
+        driveDirect(-300, 300);
+        SystemClock.sleep(500);
+        dockingStation(inByte);
     }
 
     /** This method is called repeatedly. **/
     public void loop() throws ConnectionLostException {
-
+        wallHugger();
+        //goldRush();
 
 
 
