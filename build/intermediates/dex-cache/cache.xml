@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/exploded-aar/GreenBot2016/iOIOLib/unspecified/jars/classes.jar"
+        jar="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/exploded-aar/GreenBot2016/iOIOiRobot2/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="524d227cd1d1be4f6b709cbcb5d35e681fa5ceda">
-        <dex dex="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/pre-dexed/debug/GreenBot2016-iOIOLib-unspecified_3ef4f796278ea0f41f3a46893491b8f2d6ba0d86.jar" />
+        sha1="6dedc8ec08e05d08cc23f7926c55db3dc5fe0411">
+        <dex dex="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/pre-dexed/debug/GreenBot2016-iOIOiRobot2-unspecified_7f8428c414f08e7903fab57b4152c4047fb7661b.jar" />
     </item>
     <item
         jar="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
@@ -16,11 +16,11 @@
         <dex dex="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/pre-dexed/debug/com.android.support-support-v4-22.1.1_0d9f11f0fa3832eb2bb62f71c7001358cbe2ee4e.jar" />
     </item>
     <item
-        jar="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/exploded-aar/GreenBot2016/iOIOiRobot2/unspecified/jars/classes.jar"
+        jar="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/exploded-aar/GreenBot2016/iOIOLib/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="fb0f17c8c31ffc12e88d2f0502c2ea7c0ab4e5a5">
-        <dex dex="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/pre-dexed/debug/GreenBot2016-iOIOiRobot2-unspecified_7f8428c414f08e7903fab57b4152c4047fb7661b.jar" />
+        sha1="9d3a5cc2ca81e0b9fac0c46022f7b4ba8078e84d">
+        <dex dex="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/pre-dexed/debug/GreenBot2016-iOIOLib-unspecified_3ef4f796278ea0f41f3a46893491b8f2d6ba0d86.jar" />
     </item>
     <item
         jar="/Users/league/Desktop/GreenBot2016/GreenBot2016/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"

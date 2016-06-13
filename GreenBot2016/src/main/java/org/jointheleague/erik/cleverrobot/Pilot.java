@@ -1,4 +1,5 @@
 package org.jointheleague.erik.cleverrobot;
+//Sarcastic Fringeheads
 
 import android.os.SystemClock;
 import android.util.Log;
@@ -46,20 +47,26 @@ public class Pilot extends IRobotAdapter {
         //what would you like me to do, Clever Human?
     }
         public void wallHugger() throws ConnectionLostException {
-            driveDirect(200, 500);
-            readSensors(0);
+            driveDirect(100, 300);
+            readSensors(6);
             dashboard.log(getWallSignal() + "");
             if (isBumpRight()) {
-                driveDirect(500, -500);
-                SystemClock.sleep(100);
+                driveDirect(30, -300);
+                SystemClock.sleep(750);
             }
             if (getWallSignal() > 100) {
-                driveDirect(500, 200);
-                SystemClock.sleep(200);
+                driveDirect(300, 100);
+                SystemClock.sleep(150);
             }
-            if (isBumpRight() && isBumpLeft()) {
-                driveDirect(500, -500);
-                SystemClock.sleep(500);
+            if (isBumpRight() && isBumpLeft() ) {
+                driveDirect(300, -300);
+                SystemClock.sleep(2500);
+                dashboard.log("right");
+            }
+            if(isBumpLeft()){
+                driveDirect(300,-30);
+                SystemClock.sleep(1500);
+                dashboard.log("Left");
             }
         }
     public void dockingStation(int inByte) throws ConnectionLostException {
@@ -71,6 +78,37 @@ public class Pilot extends IRobotAdapter {
             SystemClock.sleep(10000);
             driveDirect(50, 50);
         }
+        if(inByte == 248) {
+            driveDirect(500,25);
+            SystemClock.sleep(1000);
+        }
+        if(inByte == 244) {
+            driveDirect(25, 500);
+            SystemClock.sleep(1000);
+        }
+        if(inByte == 252) {
+            driveDirect(500, 500);
+            SystemClock.sleep(2000);
+        }
+        if(inByte == 254) {
+            driveDirect(500, 500);
+            SystemClock.sleep(2000);
+        }
+
+        if(isBumpRight()){
+            driveDirect(-500,500);
+            SystemClock.sleep(500);
+        }
+        if(isBumpLeft()){
+            driveDirect(500,-500);
+            SystemClock.sleep(500);
+        }
+        if(isBumpRight()&&isBumpLeft()){
+            driveDirect(-500,500);
+            SystemClock.sleep(500);
+        }
+
+
 
 
     }
@@ -93,11 +131,16 @@ public class Pilot extends IRobotAdapter {
         SystemClock.sleep(500);
         dockingStation(inByte);
     }
+    public void dragRace() throws ConnectionLostException{
+        driveDirect(500,500);
+        SystemClock.sleep(999999);
+    }
 
     /** This method is called repeatedly. **/
     public void loop() throws ConnectionLostException {
         wallHugger();
         //goldRush();
+        //dragRace();
 
 
 
